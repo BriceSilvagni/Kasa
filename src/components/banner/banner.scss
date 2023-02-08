@@ -1,0 +1,15 @@
+.container-banner {
+    overflow: hidden;
+    border-radius :30px;
+    margin: 2% 0 4% 0;
+    @include tablette{
+        border-radius: $border-radius-tablette;
+    }
+    @include mobile{
+        border-radius: $border-radius-mobile;
+    }
+    @include mini{
+        border-radius: $border-radius-mini;
+        margin: 1% 0 2% 0;
+    }
+}

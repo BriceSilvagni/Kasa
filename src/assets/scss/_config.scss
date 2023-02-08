@@ -1,0 +1,36 @@
+/* VARIABLES */
+
+//  COLORS
+$colour-primary: #ff6060;
+
+$colour-white: #ffffff;
+$colour-grey-light:#F6F6F6;
+$colour-grey-neutral:#E3E3E3;
+$colour-grey-dark:#C4C4C4;
+$colour-black: #000000;
+
+// BORDER-RADIUS
+$border-radius-desktop: 25px;
+$border-radius-tablette: 20px;
+$border-radius-mobile: 15px;
+$border-radius-mini: 10px;
+
+// BREAKPOINTS
+@mixin tablette{
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin mini{
+    @media screen and (max-width: 376px){
+        @content;
+    }
+}
+

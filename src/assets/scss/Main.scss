@@ -1,0 +1,15 @@
+//  GENERAL
+
+@import "./_config";
+@import "./global";
+
+//  COMPONENTS
+@import "src/components/banner/banner.scss";
+@import "../../components/header/header.scss";
+@import "src/components/footer/footer.scss";
+@import "src/components/navbar/navbar.scss";
+@import "../../components/lodging/lodging.scss";
+
+
+//  PAGES
+@import "src/components/app.scss";

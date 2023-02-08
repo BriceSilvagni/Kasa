@@ -1,0 +1,21 @@
+footer {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: $colour-white;
+    background: $colour-black;
+}
+
+.footer-text {
+    font-size: 24px;
+    @include tablette{
+        font-size: 20px;
+    }@include mobile{
+        font-size: 16px;
+    }
+    @include mini{
+        font-size: 12px;
+    }
+}

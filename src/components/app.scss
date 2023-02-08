@@ -1,0 +1,30 @@
+body {
+    max-width: 1920px;
+    width: 100%;
+}
+
+header {
+    height: 68px;
+    padding: 5% 4% 2% 4%;
+    @include tablette{
+        padding: 7% 4% 3% 4%;
+    }
+    @include mobile{
+        padding: 10% 4% 5% 4%;
+    }
+    @include mini{
+        padding: 1% 4% 0% 4%;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 209px;
+}
+
+main {
+    padding:2% 4%;
+    @include mini{
+        padding-top:0;
+    }
+}

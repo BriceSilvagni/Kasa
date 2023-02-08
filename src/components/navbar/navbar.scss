@@ -1,0 +1,39 @@
+nav {
+    width: 22%;
+    @include tablette{
+        width: 26%;
+        min-width: 200px;
+    }
+    @include mobile{
+        width: 40%;
+        min-width: 160px;
+    }
+    @include mini{
+        width: 45%;
+        min-width: 108px;
+    }
+}
+
+.navigation {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+    @include tablette{
+        font-size: 20px;
+    }
+    @include mobile{
+        font-size: 16px;
+    }
+    @include mini{
+        font-size: 12px;
+    }
+}
+
+.navigation a:visited{
+    color: $colour-primary;
+}
+
+.navigation a:active{
+    text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: $colour-primary;
+}
+
+.container-logo {
+    width: 210px;
+    @include tablette{
+        width: 175px;
+    }
+    @include mobile{
+        width: 150px;
+    }
+    @include mini{
+        width: 33%;
+    }
+}
+
+.header-logo {
+    width:100%;
+}
