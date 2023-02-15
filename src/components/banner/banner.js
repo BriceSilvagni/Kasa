@@ -1,10 +1,11 @@
-import BannerPict from '../../assets/images/banner.jpg'
-
-function banner() {
+function banner({ Banner, FigcaptionClass, Slogan }) {
     return (
-        <div className="container-banner">
-            <img src={BannerPict} alt="Banner pict" className="pict" />
-        </div>
+        <figure className="container-banner">
+            <img src={Banner} alt="Banner pict" className="pict" />
+            <figcaption className={FigcaptionClass}>
+                <h1>{Slogan}</h1>
+            </figcaption>
+        </figure>
     )
 }
 

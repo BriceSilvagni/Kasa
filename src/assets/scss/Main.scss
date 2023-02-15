@@ -1,6 +1,7 @@
 //  GENERAL
 
-@import "./_config";
+@import "./_variable";
+@import "./_mixin";
 @import "./global";
 
 //  COMPONENTS
@@ -9,7 +10,8 @@
 @import "src/components/footer/footer.scss";
 @import "src/components/navbar/navbar.scss";
 @import "../../components/lodging/lodging.scss";
+@import "../../components/collapse/collapse.scss";
 
 
 //  PAGES
-@import "src/components/app.scss";
+@import "../../pages/about/about.scss";
