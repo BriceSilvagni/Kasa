@@ -22,19 +22,9 @@ function Carousel() {
 
     return (
         <div className="carousel-container">
-            {length > 1 && (
-                <button className="arrowPrev">
-                    <img src={ArrowLeft} onClick={prevPict} alt="fleche" />
-                </button>
-            )}
-            {length > 1 && (
-                <button className="arrowNext">
-                    <img src={ArrowRight} onClick={nextPict} alt="fleche" />
-                </button>
-            )}
             {pictures.map((img, index) => {
                 return (
-                    <div key={index}>
+                    <div className="container-pict" key={index}>
                         {index === current && (
                             <img
                                 src={img}
@@ -42,14 +32,34 @@ function Carousel() {
                                 className="slider-image"
                             />
                         )}
-                        {index === current && (
-                            <strong className="carousel-counter">
-                                {current + 1}/{pictures.length}
-                            </strong>
-                        )}
                     </div>
                 )
             })}
+            {length > 1 && (
+                <div className="utils-container">
+                    <div className="arrow-container">
+                        <button className="arrowPrev">
+                            <img
+                                src={ArrowLeft}
+                                onClick={prevPict}
+                                alt="fleche"
+                            />
+                        </button>
+                        <button className="arrowNext">
+                            <img
+                                src={ArrowRight}
+                                onClick={nextPict}
+                                alt="fleche"
+                            />
+                        </button>
+                    </div>
+                    <div className="counter-container">
+                        <p className="carousel-counter">
+                            {current + 1}/{pictures.length}
+                        </p>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
