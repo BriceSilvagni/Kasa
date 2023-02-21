@@ -1,0 +1,27 @@
+.block-lodging-tags ul {
+    display: flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+    gap:10px;
+    
+}
+
+.block-lodging-tags ul li{
+    color: $colour-white;
+    background-color: $colour-primary;
+    @include flex-center;
+    min-width: 115px;
+    height: 25px;
+    padding: 0 2%;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    @include mobile {
+        height:20px;
+        font-size: 12px;
+    }
+    @include mini {
+        height:18px;
+        font-size: 10px;
+    }
+}

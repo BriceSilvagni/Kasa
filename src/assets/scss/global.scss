@@ -12,27 +12,38 @@
 
 body {
     max-width: 1920px;
-    width: 100%;
     font-family: 'Montserrat', sans-serif;
 }
 
+#root {
+    
+    @include flex-center-column;
+}
+
 header {
+    max-width: 1240px;
+    width: 86%;
     height: 68px;
-    padding: 5% 4% 2% 4%;
+    padding: 5% 0 2% 0;
     @include tablette{
-        padding: 7% 4% 3% 4%;
+        padding: 7% 0 3% 0;
     }
     @include mobile{
-        padding: 10% 4% 5% 4%;
+        padding: 10% 0 5% 0;
     }
     @include mini{
-        padding: 1% 4% 0% 4%;
+        width: 89%;
+        padding: 1% 0 0% 0;
     }
 }
 
 main {
-    padding:2% 4%;
+    max-width: 1240px;
+    width: 86%;
+    @include flex-center-column;
+    padding:2% 0;
     @include mini{
+        width: 89%;
         padding-top:0;
     }
 }
@@ -42,12 +53,16 @@ footer {
     height: 209px;
 }
 
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 figure {
     line-height: 0;
-}
-
-.pict {
-    width: 100%;
-    object-fit: cover;
 }

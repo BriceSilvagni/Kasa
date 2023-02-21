@@ -2,8 +2,31 @@
     display: none;
 }
 
-.collapses-container {
-    display:flex;
-    flex-direction: column;
+.collapses-container.about {
+    width: 82.5%;
+    @include flex-center-column;
     gap: 25px;
+    @include mobile{
+        width: 100%;
+        margin :2% 0;
+        gap: 22px;
+    }
+    @include mini{
+        margin :3% 0;
+        gap: 20px;
+    }
+}
+
+.about-collapse h2 {
+    font-size: 24px;
+    font-weight: 500;
+    @include tablette{
+        font-size: 20px;
+    }
+    @include mobile{
+        font-size: 16px;
+    }
+    @include mini{
+        font-size: 13px;
+    }
 }

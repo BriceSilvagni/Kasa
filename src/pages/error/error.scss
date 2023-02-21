@@ -1,0 +1,31 @@
+#main-error {
+    justify-content: space-between;
+    @include mini {
+        padding-top: 125px; 
+    }
+}
+
+.wc{
+    font-size:288px;
+    font-weight: 700;
+    line-height: 410.69px;
+    @include tablette {
+        font-size:220px;
+    }
+    @include mobile {
+        font-size:160px;
+    }
+    @include mini {
+        font-size:96px;
+        line-height: 140px; 
+    }
+}
+
+.text-error {
+    text-align: center;
+}
+
+.container-error {
+    color: $colour-primary;
+    @include flex-center-column;
+}

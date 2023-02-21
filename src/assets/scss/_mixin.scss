@@ -2,19 +2,33 @@
 
 // BREAKPOINTS
 @mixin tablette{
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1439px){
         @content;
     }
 }
 
 @mixin mobile{
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 991px){
         @content;
     }
 }
 
 @mixin mini{
-    @media screen and (max-width: 376px){
+    @media screen and (max-width: 375px){
         @content;
     }
+}
+
+@mixin flex-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

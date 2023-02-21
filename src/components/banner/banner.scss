@@ -1,11 +1,10 @@
 .container-banner {
+    @include flex-center;
+    width: 100%;
+    height:223px;
     overflow: hidden;
     border-radius :30px;
     margin: 2% 0 4% 0;
-
-    display:flex;
-    justify-content: center;
-    align-items: center;
 
     @include tablette{
         border-radius: $border-radius-tablette;
@@ -14,9 +13,15 @@
         border-radius: $border-radius-mobile;
     }
     @include mini{
+        max-height: 111px;
         border-radius: $border-radius-mini;
         margin: 1% 0 2% 0;
     }
+}
+
+img.bannerPict {
+    width: 100%;
+    object-fit: cover;
 }
 
 figcaption {
@@ -24,6 +29,7 @@ figcaption {
 }
 
 figcaption h1 {
+    line-height: 24px;
     color: $colour-white;
     font-size: 48px;
     font-weight: 500;
@@ -31,9 +37,12 @@ figcaption h1 {
         font-size: 36px;
     }
     @include mobile{
-        font-size: 24px;
+        padding: 0 18%;
+        font-size: 28px;
     }
     @include mini{
-        font-size: 12px;
+        
+        line-height: 24px;
+        font-size: 24px;
     }
 }

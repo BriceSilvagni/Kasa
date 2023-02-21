@@ -1,7 +1,7 @@
 function banner({ Banner, FigcaptionClass, Slogan }) {
     return (
         <figure className="container-banner">
-            <img src={Banner} alt="Banner pict" className="pict" />
+            <img src={Banner} alt="Banner pict" className="bannerPict" />
             <figcaption className={FigcaptionClass}>
                 <h1>{Slogan}</h1>
             </figcaption>

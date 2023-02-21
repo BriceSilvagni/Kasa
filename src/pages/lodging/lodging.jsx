@@ -1,31 +1,49 @@
-function lodging() {
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom"
+import Error from '../../pages/error/error'
+import { logementsList } from '../../assets/logements'
+import Carousel from "../../components/carousel/carousel"
+import Tags from '../../components/tags/tags'
+import Host from '../../components/host/host'
+import Collapse from '../../components/collapse/collapse'
+import Rating from '../../components/rating/rating'
+
+function Lodging() {
+    const { id } = useParams()
+    const foundLodging = logementsList.find((object) => object.id === id)
+    const [item, setItem] = useState();
+
+    useEffect(() => {setItem(foundLodging)})
+        // redirect si foundItem is undefined
+        if (!item) {
+            return <Error />
+        }
+
     return (
         <main>
-            <div>IMG correspondant à l'ID de la page</div>
-            <div>
-                <div>Title</div>
-                <div>Location</div>
-                <div>Tag</div>
-            </div>
-            <div>
-                <div>
-                    <div>OwnerName</div>
-                    <div>OwnerName Pic'</div>
+            <Carousel />
+            <section className="info-blocks">
+                <div className="block-left">
+                    <div className='block-lodging-title'><p>{foundLodging.title}</p></div>
+                    <div className='block-lodging-location'>{foundLodging.location}</div>
+                    <Tags lodging={foundLodging} />
                 </div>
-                <div class="components onlavudanslecoursavecdessoleils">
-                    <div>Star</div>
-                    <div>Star</div>
-                    <div>Star</div>
-                    <div>Star</div>
-                    <div>Star</div>
+                <div className="block-right">
+                    <Host name={foundLodging.host.name} pict={foundLodging.host.picture} />              
+                    <Rating score={foundLodging.rating} />               
                 </div>
-            </div>
-            <div class="collapse-container">
-                <div class="components collapse">Description</div>
-                <div class="components collapse">Equipements</div>
+            </section>
+            <div className="collapses-container lodging">
+            <Collapse collapseClass="lodging " title="Description" description={foundLodging.description} />
+            <Collapse collapseClass="lodging equipments " title="Équipements"
+                description= {<ul>{foundLodging.equipments.map((equipment, index) => (
+                    <li key={`${equipment}-${index}`}>
+                        {equipment}
+                    </li>              
+                ))}</ul>} />
             </div>
         </main>
     )
 }
 
-export default lodging
+export default Lodging

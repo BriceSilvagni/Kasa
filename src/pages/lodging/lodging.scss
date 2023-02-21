@@ -1,0 +1,108 @@
+.info-blocks {
+    width: 100%;
+    margin-top: 2%;
+    color: $colour-primary;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.block-left {
+    display:flex;
+    flex-direction : column;
+    justify-content: space-between;
+}
+
+.block-right {
+    display:flex;
+    flex-direction : column;
+    justify-content: space-between;
+    @include mobile {
+        margin-top: 2%;
+        flex-direction: row-reverse;
+    }
+}
+
+.block-lodging-title p{
+    font-size: 36px;
+    font-weight: 500;
+    @include mobile {
+        font-size: 24px;
+    }
+    @include mini {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+.block-lodging-location {
+    font-size: 18px;
+    font-weight: 500;
+    @include mobile {
+        font-size: 16px;
+    }
+    @include mini {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 2%;
+    }
+}
+
+.block-lodging-tags {
+    position :relative;
+    top: 20px;
+    @include mobile {
+        position: unset;
+        padding-top:2%;
+    }
+}
+
+.stars-area {
+    position :relative;
+    top: 20px;
+    @include mobile {
+        position: unset;
+    }
+}
+
+.stars-area img {
+    @include mobile {
+        height: 20px;
+        width:20px;
+    }
+    @include mini {
+        height: 15px;
+        width:15px;
+    }
+}
+
+.collapses-container.lodging {
+    width: 100%;
+    margin :3.5% 0 1% 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.collapse-container.lodging {
+    width: 47%;
+}
+
+.collapse-container.lodging.equipments p {
+    display:flex;
+    flex-direction: column;
+}
+
+h2.headband-title.about {
+    font-weight:500;
+    font-size:18px;
+    @include mobile{
+        font-size:16px;
+    }
+    @include mini{
+        font-size:13px;
+    }
+}

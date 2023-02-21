@@ -1,0 +1,83 @@
+.container-cards{
+    width: 100%;
+    background: $colour-grey-light;
+    border-radius: 25px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 3% 2%;
+    overflow: hidden;
+    @include mini{
+        background: $colour-white;
+        padding : 0;
+    }
+    
+}
+
+.container-cards li{ 
+    @include flex-center;
+    width: 33%;
+    @include tablette{
+        width: 50%;
+    }
+    @include mobile{
+        width: 100%;
+    }
+    @include mini{
+        width: 100%;
+    }
+}
+
+.container-card {
+    width: 86%;
+    margin: 7% 0%;
+    @include mobile{
+        margin: 4% 0%;
+    }
+    @include mini{
+        width: 100%;
+        margin: 3.6% 0%;
+    }
+}
+
+.card {
+    width: 100%;
+    max-height: 340px;
+    border-radius: 25px;
+    background-color: $colour-primary;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    border-radius: $border-radius-mini;
+    @include mini{
+        height: 255px;       
+    }
+}
+
+.lodging-title {
+    position:absolute;
+    width: 10%;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    color: $colour-white;
+    font-size: 18px;
+    @include tablette{
+        width: 14%;
+        padding-left: 1.5%;
+        padding-bottom: 1.5%;
+    }
+    @include mobile{
+        width: 20%;
+        padding-left: 3%;
+        padding-bottom: 2.5%;
+    }
+    @include mini{
+        width: 50%;
+    }
+}
+
+.lodgingPict {
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,38 @@
+.block-right-up{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.block-right-upName {
+    width:50%;
+    font-size :18px;
+    @include mobile {
+        font-size: 14px
+    }
+    @include mini {
+        font-size: 12px;
+    }
+}
+
+.hostPict-container{
+    height: 64px;
+    width: 64px;
+    border-radius: 33px;
+    overflow:hidden;
+    @include flex-center;
+    @include mobile {
+        height: 48px;
+        width: 48px;
+    }
+    @include mini {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+.hostPict-container img {
+    height: 100%;
+    width: 100%;
+}
