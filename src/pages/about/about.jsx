@@ -5,7 +5,7 @@ import BannerPict from '../../assets/images/banner-about.jpg'
 function about() {
     return (
         <main>       
-            <Banner Banner={BannerPict} Slogan="blabla" FigcaptionClass="figcaption-about"></Banner>
+            <Banner Banner={BannerPict} AltPict="Montagnes enneigées" FigcaptionClass="figcaption-about"></Banner>
             <div className ="collapses-container about">
                 <Collapse collapseClass="about-collapse " title="Fiabilité" description="Les annonces postées sur Kasa garantissent une fiabilité totale.
                     Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />

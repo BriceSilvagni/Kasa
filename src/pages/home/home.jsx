@@ -7,7 +7,7 @@ import BannerPict from '../../assets/images/banner.jpg'
 function home() {
     return (
         <main>
-            <Banner Banner={BannerPict} Slogan="Chez vous, partout et ailleurs" />
+            <Banner Banner={BannerPict} AltPict="Falaises en bord de mer" Slogan="Chez vous, partout et ailleurs" />
             <Cards />
         </main>
     )

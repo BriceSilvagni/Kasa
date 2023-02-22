@@ -1,9 +1,11 @@
 header {
     display:flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;    
     color: $colour-primary;
+    @include mini {
+        flex-wrap: wrap;
+    }
 }
 
 .container-logo {

@@ -1,7 +1,7 @@
-function banner({ Banner, FigcaptionClass, Slogan }) {
+function banner({ Banner, FigcaptionClass, AltPict, Slogan }) {
     return (
         <figure className="container-banner">
-            <img src={Banner} alt="Banner pict" className="bannerPict" />
+            <img src={Banner} alt={AltPict} className="bannerPict" />
             <figcaption className={FigcaptionClass}>
                 <h1>{Slogan}</h1>
             </figcaption>
