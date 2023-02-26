@@ -1,5 +1,6 @@
 .carousel-container {
     height: 415px;
+    width:100%;
     border-radius :25px;
     overflow:hidden;
     @include flex-center;
@@ -26,10 +27,21 @@
     }
 }
 
+.active-img {
+    height: 100%;
+    width: 100%;
+}
+
 .container-pict {
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+.container-pict img  {
+    height:100%;
+    width: 100%;
+    object-fit:cover;
 }
 
 .arrow-container {
@@ -85,15 +97,6 @@
     }
 }
 
-.slider-image {
-    min-height: 415px;
-    
-}
-
-img.slider-image  {
-    width: 100%;
-    object-fit:cover;
-}
 
 .carousel-counter {
     font-size:18px;

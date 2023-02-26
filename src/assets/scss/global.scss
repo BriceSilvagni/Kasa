@@ -41,7 +41,7 @@ main {
     max-width: 1240px;
     width: 86%;
     @include flex-center-column;
-    padding:2% 0;
+    padding:2% 0 3% 0;
     @include mini{
         width: 89%;
         padding-top:0;

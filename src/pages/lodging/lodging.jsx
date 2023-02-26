@@ -11,13 +11,14 @@ import Rating from '../../components/rating/rating'
 function Lodging() {
     const { id } = useParams()
     const foundLodging = logementsList.find((object) => object.id === id)
-    const [item, setItem] = useState();
+    const [item, setItem] = useState()
 
-    useEffect(() => {setItem(foundLodging)})
-        // redirect si foundItem is undefined
-        if (!item) {
-            return <Error />
-        }
+    useEffect(() => {setItem(foundLodging)}, [foundLodging])
+
+    // redirect si foundItem is undefined
+    if (!item) {
+        return <Error />
+    }
 
     return (
         <main>

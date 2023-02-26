@@ -24,13 +24,16 @@ function Carousel() {
         <div className="carousel-container">
             {pictures.map((img, index) => {
                 return (
-                    <div className="container-pict" key={index}>
+                    <div
+                        className={
+                            current === index
+                                ? 'container-pict active-img'
+                                : 'container-pict'
+                        }
+                        key={index}
+                    >
                         {index === current && (
-                            <img
-                                src={img}
-                                alt="Photos du logement"
-                                className="slider-image"
-                            />
+                            <img src={img} alt="Photos du logement" />
                         )}
                     </div>
                 )
